@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component} from 'react';
+import {Row,Col,Container} from 'react-bootstrap';
 import './App.css';
 import JumboTron from './Jumbotron.jsx'
+import ShipGrid from './Grid.jsx'
 
 
  class  App extends Component  {
@@ -8,6 +10,8 @@ import JumboTron from './Jumbotron.jsx'
     return(
     <div className="App">
       <JumboTron/>
+       <ShipGrid/>
+      
     <div> hello</div>
     </div>
     )

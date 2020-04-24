@@ -15,10 +15,11 @@ render(){
         background: url(${oceanImage}) no-repeat fixed bottom;
         background-size: cover;
         color:#ccc
-        height:10px;
+        height:100px;
         position:relative;
         z-index -2;
         margin-bottom: 0px ;
+        
         
         
         }

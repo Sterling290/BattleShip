@@ -1,0 +1,20 @@
+.boxx {
+    background-color: brown;
+    size: 20px;
+
+}
+/* .rowww{
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-gap: 20px;
+} */
+.backgroundGrid{
+    background-color: chartreuse;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(20px, 10px);
+    background-color: black;
+  }
