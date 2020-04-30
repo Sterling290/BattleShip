@@ -26,7 +26,6 @@ for(var i = 0; i < 101;i++){
 array.push(i)
   }
       }
-var cool = 0
     return(
     <div>
 
@@ -83,13 +82,16 @@ var cool = 0
         
         //change div to checkmark if all is true
         //clear count variables
-        twoX === 2? document.getElementById("2x").text = "&#9745;" : 
-        threeX === 3? document.getElementById("2x").text = "&#9745;" : 
-        fourX === 1? document.getElementById("2x").text = "&#9745;" : console.log(false),
+        twoX === 2? document.getElementById("2x").innerHTML = "&#9745;": document.getElementById("2x").innerHTML = "&#9746;",
+        threeX === 3? document.getElementById("3x").innerHTML = "&#9745;" : document.getElementById("3x").innerHTML = "&#9746;",
+        fourX === 1? document.getElementById("1x").innerHTML = "&#9745;" : document.getElementById("1x").innerHTML = "&#9746;",
         twoX  = 0,
         threeX = 0,
         fourX = 0,
-        
+        // array.length = 0,
+        newArray.length = 0,
+        arrayRows.length = 0,
+        horArray.length = 0
 
          
       
@@ -98,8 +100,8 @@ var cool = 0
        <button>submit</button>
        {/*  check: &#9745;   x:&#9746;                  */}
        <p>2x:2Block  <box ClassName="checkmark" id ="2x">&#9746;</box> 
-          1x: 4Block <box ClassName="checkmark" id ="1x">&#9746;</box> 
-          3x: 3Block <box ClassName="checkmark" id ="3x">&#9746;</box>        
+       &nbsp; &nbsp; &nbsp; 1x: 4Block   <box ClassName="checkmark" id ="1x">&#9746;</box> 
+       &nbsp; &nbsp; &nbsp; 3x: 3Block   <box ClassName="checkmark" id ="3x">&#9746;</box>        
        </p>
       <Media.Body>
       {/* <box classname = "backgroundGrid"> */}
