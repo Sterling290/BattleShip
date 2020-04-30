@@ -10,6 +10,7 @@ import ShipGrid from './Grid.jsx'
     return(
     <div className="App">
       <JumboTron/>
+      <hr></hr>
        <ShipGrid/>
       
     <div> hello</div>
