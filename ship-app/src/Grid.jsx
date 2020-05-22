@@ -8,7 +8,7 @@ import styling from './Grid.css'
 class  ShipGrid extends React.Component {
 constructor(props){
 super(props);
-this.state = {}
+
 }
 
 
@@ -32,7 +32,10 @@ array.push(i)
        <Media>
        {/* <box className="boxx" id="Boats">Boats</box> */}
        <button onClick ={(e)=> e.preventDefault(
-        
+        document.getElementById("result").style.display = "none",
+        newArray.length = 0,
+        arrayRows.length = 0,
+        horArray.length = 0,
          array.map((each)=>{ 
           if(each !== 0 && document.getElementById(`${each}`).style.background === ""){arrayRows.push(0)}
           else if( each !== 0 && document.getElementById(`${each}`).style.background === "rgb(200, 120, 30)"){arrayRows.push(0)}else if(each !== 0){arrayRows.push(1)}
@@ -62,6 +65,8 @@ array.push(i)
         })
       })
         ,
+        console.log(newArray)
+        ,
         //Verticle test
         newArray.map((each)=>{
          JSON.stringify(each.join('')).split('0')
@@ -85,23 +90,27 @@ array.push(i)
         twoX === 2? document.getElementById("2x").innerHTML = "&#9745;": document.getElementById("2x").innerHTML = "&#9746;",
         threeX === 3? document.getElementById("3x").innerHTML = "&#9745;" : document.getElementById("3x").innerHTML = "&#9746;",
         fourX === 1? document.getElementById("1x").innerHTML = "&#9745;" : document.getElementById("1x").innerHTML = "&#9746;",
+        twoX === 2? threeX === 3? fourX === 1? document.getElementById("result").style.display = "block":console.log("false"):console.log("false"):console.log("false"),
         twoX  = 0,
         threeX = 0,
         fourX = 0,
         // array.length = 0,
-        newArray.length = 0,
-        arrayRows.length = 0,
-        horArray.length = 0
-
-         
-      
-        
+       
         )}>test</button>
-       <button>submit</button>
+
+
+
+       <a className="submit" id = "result"  href="/game" onClick = {this.setState()}
+       >submit</a>
+
+
+
+
+
        {/*  check: &#9745;   x:&#9746;                  */}
-       <p>2x:2Block  <box ClassName="checkmark" id ="2x">&#9746;</box> 
-       &nbsp; &nbsp; &nbsp; 1x: 4Block   <box ClassName="checkmark" id ="1x">&#9746;</box> 
-       &nbsp; &nbsp; &nbsp; 3x: 3Block   <box ClassName="checkmark" id ="3x">&#9746;</box>        
+       <p>2x:2Block  <box className="checkmark" id ="2x">&#9746;</box> 
+       &nbsp; &nbsp; &nbsp; 1x: 4Block   <box className="checkmark" id ="1x">&#9746;</box> 
+       &nbsp; &nbsp; &nbsp; 3x: 3Block   <box className="checkmark" id ="3x">&#9746;</box>        
        </p>
       <Media.Body>
       {/* <box classname = "backgroundGrid"> */}

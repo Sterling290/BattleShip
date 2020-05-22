@@ -22,3 +22,6 @@
     border:3px;
     padding:5px;
   }
+  .submit{
+    display:none;
+  }
