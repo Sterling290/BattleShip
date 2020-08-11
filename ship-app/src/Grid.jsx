@@ -8,7 +8,6 @@ import styling from './Grid.css'
 class  ShipGrid extends React.Component {
 constructor(props){
 super(props);
-
 }
 
 
@@ -30,7 +29,7 @@ array.push(i)
     <div>
 
        <Media>
-       {/* <box className="boxx" id="Boats">Boats</box> */}
+         {/* test button */}
        <button onClick ={(e)=> e.preventDefault(
         document.getElementById("result").style.display = "none",
         newArray.length = 0,
@@ -94,26 +93,23 @@ array.push(i)
         twoX  = 0,
         threeX = 0,
         fourX = 0,
-        // array.length = 0,
        
         )}>test</button>
 
-
-
-       <a className="submit" id = "result"  href="/game" onClick = {this.setState()}
+       <a className="submit" id = "result"   onClick = {(e) => e.preventDefault(this.setState({array:11}),console.log(this.props))}
        >submit</a>
 
 
 
 
 
-       {/*  check: &#9745;   x:&#9746;                  */}
+       {/*  check: &#9745;   x:&#9746;      */}
        <p>2x:2Block  <box className="checkmark" id ="2x">&#9746;</box> 
        &nbsp; &nbsp; &nbsp; 1x: 4Block   <box className="checkmark" id ="1x">&#9746;</box> 
        &nbsp; &nbsp; &nbsp; 3x: 3Block   <box className="checkmark" id ="3x">&#9746;</box>        
        </p>
       <Media.Body>
-      {/* <box classname = "backgroundGrid"> */}
+      {/* the grid */}
       <div className ="wrapper">
       {array.map((each)=> <box onClick ={(e) => e.preventDefault(document.getElementById(`${each}`).style.background === ""?document.getElementById(`${each}`).style.background = "rgb(100, 140, 30)":
       document.getElementById(`${each}`).style.background === "rgb(200, 120, 30)"? document.getElementById(`${each}`).style.background = "rgb(100, 140, 30)":
@@ -122,10 +118,7 @@ array.push(i)
       
       )}
       </div>
-      {/* </box> */}
-      {/* <Container>
-      <Row className ="roww">
-      </Container> */}
+    
       </Media.Body>
       </Media>  
     </div>
